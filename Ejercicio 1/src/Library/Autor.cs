@@ -12,7 +12,7 @@ namespace SRP
 
         public string NombreCompleto {
             get{
-                if(this.Nombre != null && this.Apellido != null){
+                if(!String.IsNullOrEmpty(this.Nombre) && !String.IsNullOrEmpty(this.Apellido)){
                     return $"{this.Nombre} {this.Apellido}";
                 }
                 return null;
@@ -36,9 +36,9 @@ namespace SRP
         }
 
         public string ObtenerNombre(){
-            if(this.NombreCompleto != null){
+            if(!String.IsNullOrEmpty(this.NombreCompleto)){
                 return this.NombreCompleto;
-            } else if(this.Seudonimo != null){
+            } else if(!String.IsNullOrEmpty(this.Seudonimo)){
                 return this.Seudonimo;
             } else {
                 return "Anónimo";

@@ -26,6 +26,10 @@ namespace SRP
 
         public Libro EncontrarLibroConTitulo(String titulo)
         {
+            if(String.IsNullOrEmpty(titulo)){
+                return null;
+            }
+            
             foreach(Libro libroEnBiblioteca in this.Libros)
             {
                 if(libroEnBiblioteca.Titulo.Equals(titulo))

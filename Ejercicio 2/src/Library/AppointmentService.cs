@@ -5,6 +5,12 @@ namespace Library
 {
     public class AppointmentService
     {
+        /*
+        En lugar de validar todos los datos en el mismo método con el que creamos la consulta, deberíamos
+        verificar los datos de los pacientes y los doctores al registrarlos en el sistema del hospital.
+        Si la información de los pacientes o los doctores que se requiere para crear una consulta cambiara,
+        sería necesario continuar modificando este método.
+        */
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
